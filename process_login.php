@@ -1,31 +1,37 @@
 <?php
 session_start();
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-
-    // Authenticate user (check credentials in the database)
-    $servername = "localhost";
-    $dbusername = "your_username";
-    $dbpassword = "your_password";
-    $dbname = "database_name depende kay hans";
-
-    $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
+    function validate($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
     }
+    
+    $username = validate($_POST['username']);
+    $password = validate($_POST['password']);
 
-    $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
-    $result = $conn->query($sql);
+    $admin = "admin";
+    $pass = "password";
 
-    if ($result->num_rows == 1) {
-        $_SESSION['username'] = $username; // Store username in session for further use
-        header("Location: display_data.php"); // Redirect to display page
-    } else {
-        echo "Invalid username or password";
+    if ($username == $admin && $password == $pass) {
+        header("Location: registration.php");
+        exit();
     }
-
-    $conn->close();
+    else {
+        if ($username != $admin){
+            header("Location: login.php?error=Username does not exist!");
+            exit();
+        }
+        else if ($password != $pass){
+            header("Location: login.php?error=Wrong password!");
+            exit();
+        }
+        else {
+            header("Location: login.php?error=Wrong username or password!");
+            exit();
+        }
+    }
 }
 ?>

@@ -26,18 +26,22 @@
     <article class="fcon center">
         <section class="login fcon col center gap animate fade-right">
             <img id="logo" alt="logo" src="logo.png"/>
-            <form action="process_login.php" method="post">
+            <form action="process_login.php" method="POST">
                 <div class="inputGroup">
                     <input type="text" id="username" name="username" required=""/>
                     <label for="username" class="label">Username: </label>
                     <div class="underline"></div>
                 </div>
-                
                 <div class="inputGroup">
-                    <input type="text" id="password" name="password" required=""/>
+                    <input type="password" id="password" name="password" required=""/>
                     <label for="password" class="label">Password: </label>
                     <div class="underline"></div>
                 </div>
+                <?php
+                    if (isset($_GET['error'])) {
+                        echo '<div class="badges"><p class="red">'. $_GET['error'] .'</div></p>';
+                    }
+                ?>
                 <input type="submit" name="submit" id="submit" class="button" value="Login"/>
             </form>
         </section>
