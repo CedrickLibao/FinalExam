@@ -113,20 +113,230 @@
   }
 /*#endregion */
 
-.titlePage {
+.Page {
     height: 100vh;
     width: 100%;
 }
 
-#logo {
+.logo {
     width: 200px;
     margin: 50px;
 }
 
-.titlePage h1 {
+#logo {
+    width: 50px;
+}
+
+.Page h1 {
     display: none;
 }
 
 .border {
     border: 1px solid black;
 }
+
+.inputGroup {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 1em 0 1em 0;
+    position: relative;
+  }
+  
+  .inputGroup input {
+    font-size: 100%;
+    padding: 0.8em;
+    outline: none;
+    border: 2px solid rgb(200, 200, 200);
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100%;
+  }
+  
+  .inputGroup label {
+    font-size: 100%;
+    position: absolute;
+    left: 0;
+    padding: 0.8em;
+    margin-left: 0.5em;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    color: rgb(100, 100, 100);
+  }
+  
+  .inputGroup :is(input:focus, input:valid)~label {
+    transform: translateY(-50%) scale(.9);
+    margin: 0em;
+    margin-left: 1.3em;
+    padding: 0.4em;
+    background-color: #e8e8e8;
+  }
+  
+  .inputGroup :is(input:focus, input:valid) {
+    border-color: rgb(150, 150, 200);
+  } 
+
+  .button {
+    color: #090909;
+    padding: 0.7em 1.7em;
+    font-size: 18px;
+    border-radius: 0.5em;
+    background: #e8e8e8;
+    border: 1px solid #e8e8e8;
+    transition: all .3s;
+    box-shadow: 6px 6px 12px #c5c5c5,
+               -6px -6px 12px #ffffff;
+  }
+  
+  .button:hover {
+    border: 1px solid white;
+  }
+  
+  .button:active {
+    box-shadow: 4px 4px 12px #c5c5c5,
+               -4px -4px 12px #ffffff;
+  }
+
+  .login {
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+  }
+
+  #submit {
+    width: 100%;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .login input {
+    flex: 1 1;
+  }
+
+  video {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+  }
+
+  #login > article {
+    padding: 10vw;
+    flex: 1 1 50%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  
+  #login > article:nth-child(2) p {
+    color: white;
+    font-size: 3rem;
+    font-weight: bolder;
+  }
+
+/*#region fade animation and other styles*/
+.fade {
+    opacity: 0;
+    animation: fade 2s ease forwards;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeUp 2s ease forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-down {
+    opacity: 0;
+    transform: translateY(-100px);
+    animation: fadeDown 2s ease forwards;
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: fadeLeft 2s ease forwards;
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-right {
+    opacity: 0;
+    transform: translateX(100px);
+    animation: fadeRight 2s ease forwards;
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes parallaxY {
+    to {
+        transform: translateY(calc(var(--speed) * 75px));
+    }
+}
+
+@keyframes parallaxX {
+    to {
+        transform: translateX(calc(var(--speed) * 75px));
+    }
+}
+
+/*#endregion */

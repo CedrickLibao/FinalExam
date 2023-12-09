@@ -9,16 +9,16 @@
     <!-- Favicon and Styles -->
     <link rel="icon" type="image/x-icon" href="logo.png">
     <link rel="stylesheet" href="styles.css">
-    <meta http-equiv="refresh" content="3;url=login.html" />
+    <meta http-equiv="refresh" content="3;url=login.php" />
     <!-- Page Title -->
     <title>GDM RiskWatch</title>
   </head>
-  <body class="titlePage fcon center col">
+  <body class="Page fcon center col">
     <header>
       <h1>GDM RiskWatch</h1>
     </header>
     <main>
-        <img id="logo" alt="logo" src="logo.png"/>
+        <img class="logo" alt="logo" src="logo.png"/>
         <section class="dots-container">
             <div class="dot"></div>
             <div class="dot"></div>
