@@ -207,6 +207,7 @@ p, label, input, button, a, span {
   } 
 
   .button {
+    text-decoration: none;
     color: #090909;
     padding: 0.7em 1.7em;
     font-size: 18px;
@@ -502,6 +503,9 @@ header {
 
 main {
   padding: 50px;
+}
+
+body {
   background-color: #ebebeb;
 }
 
@@ -673,6 +677,7 @@ hr {
 
 
 footer {
+  background-color: white;
   padding: 20px;
 }
 

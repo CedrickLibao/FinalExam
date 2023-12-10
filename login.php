@@ -4,7 +4,6 @@
     <!-- Document Metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="John Yrrah Cabiles">
 
     <!-- Favicon and Styles -->
     <link rel="icon" type="image/x-icon" href="logo.png">
