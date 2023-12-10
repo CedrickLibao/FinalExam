@@ -18,9 +18,10 @@
       Your browser does not support the video tag.
     </video>
     <article class="fcon center animate">
+        <h1>Log In</h1>
         <section class="animate fade-left">
-            <p>Start Your Journey to Healthier Pregnancy Today!</p>
-            <p>Login for Personalized Help and Support.</p>
+            <p class="title">Start Your Journey to Healthier Pregnancy Today!</p>
+            <p class="title">Login for Personalized Help and Support.</p>
         </section>
     </article>
     <article class="fcon center">

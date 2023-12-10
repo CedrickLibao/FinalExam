@@ -9,10 +9,17 @@
     <!-- Favicon and Styles -->
     <link rel="icon" type="image/x-icon" href="logo.png">
     <link rel="stylesheet" href="styles.css">
+    
     <!-- Page Title -->
-    <title>GDM RiskWatch - Assessment</title>
+    <title>GDM RiskWatch - Registration</title>
 </head>
 <body>
+    <header class="fcon">
+        <section>
+            <img alt="logo" src="logo.png" id="header-logo"/>
+        </section>
+        <h1>GDM Risk Watch</h1>
+    </header>
     <form action="process.php" method="POST">
         
     </form>
