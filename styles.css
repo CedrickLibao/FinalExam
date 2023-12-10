@@ -614,9 +614,8 @@ footer {
   padding: 20px;
 }
 
-#boom {
+.boom {
   width: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
 }

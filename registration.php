@@ -22,7 +22,7 @@ if (isset($_SESSION["username"])) {
             <img alt="logo" src="logo.png" id="header-logo"/>
             <h1>GDM RiskWatch</h1>
         </section>
-        <section id="boom">
+        <section class="boom">
             <?php
                 if (isset($_GET['message'])) {
                     echo '<div class="badges"><p class="green">'. $_GET['message'] .'</div></p>';
@@ -250,6 +250,13 @@ if (isset($_SESSION["username"])) {
                     <section>
                         <input class="btn" type="submit" name="submit" value="Submit"/>
                     </section>
+                </section>
+                <section class="boom">
+                    <?php
+                        if (isset($_GET['error'])) {
+                            echo '<div class="badges"><p class="red">'. $_GET['error'] .'</div></p>';
+                        }
+                    ?>
                 </section>
             </form>
         </article>
