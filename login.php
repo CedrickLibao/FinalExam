@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <!-- Document Metadata -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="John Yrrah Cabiles">
 
     <!-- Favicon and Styles -->
     <link rel="icon" type="image/x-icon" href="logo.png">
-    <link rel="stylesheet" href="styles.css">
     <!-- Page Title -->
     <title>GDM RiskWatch - Log In</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="fcon center Page animate fade" id="login">
     <video muted autoplay loop>
@@ -20,8 +24,8 @@
     <article class="fcon center animate">
         <h1>Log In</h1>
         <section class="animate fade-left">
-            <p class="title">Start Your Journey to Healthier Pregnancy Today!</p>
-            <p class="title">Login for Personalized Help and Support.</p>
+            <p class="title" style="font-family: 'Montserrat', sans-serif;">Start Your Journey to Healthier Pregnancy Today!</p>
+            <p class="sub-title" style="font-family: 'Montserrat', sans-serif;">Login for Personalized Help and Support.</p>
         </section>
     </article>
     <article class="fcon center">
