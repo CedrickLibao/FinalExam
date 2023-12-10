@@ -70,11 +70,11 @@ if (isset($_SESSION["username"])) {
                     <section>
                         <div>
                             <label for="lmp">LMP (Last Menstrual Period):</label>
-                            <input type="text" id="lmp" name="lmp" class="input" placeholder="LMP" required>
+                            <input type="date" id="lmp" name="lmp" class="input" placeholder="LMP" required>
                         </div>
                         <div>
                             <label for="ldc">LDC (Last Delivery Check):</label>
-                            <input type="text" id="ldc" name="ldc" class="input" placeholder="LDC" required>
+                            <input type="date" id="ldc" name="ldc" class="input" placeholder="LDC" required>
                         </div>
                     </section>
                     <section>
