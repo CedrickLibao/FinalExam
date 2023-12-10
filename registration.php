@@ -259,7 +259,7 @@ if (isset($_SESSION["username"])) {
         </article>
     </main>
     <footer>
-        <p>&copy; GDM RiskWatch 2023 | Programmed by: | BIT34</p>
+        <p>&copy; GDM RiskWatch 2023 | Programmed by: Anoñuevo, Bautista, Cabiles, Libao , Niala , Purino| BIT34</p>
     </footer>
 </body>
 </html>

@@ -7,9 +7,9 @@ if (!isset($_SESSION['username'])) {
 
 // Retrieve patient data based on the logged-in user
 $servername = "localhost";
-$dbusername = "your_username";
-$dbpassword = "your_password";
-$dbname = "database name depende kay hans";
+$dbusername = "name";
+$dbpassword = "password";
+$dbname = "patient";
 
 $conn = new mysqli($servername, $dbusername, $dbpassword, $dbname);
 
@@ -17,9 +17,9 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$username = $_SESSION['username'];
+$username = $_SESSION['name'];
 
-$sql = "SELECT * FROM patient_data WHERE username = '$username'";
+$sql = "SELECT * FROM patient_data WHERE  = '$username'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
