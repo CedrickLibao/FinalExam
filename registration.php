@@ -233,17 +233,13 @@ if (isset($_SESSION["username"])) {
                     <section>
                         <h3>Risk Assessment:</h3>
                         <section>
-                            <div class="radio-buttons">
-                                <label class="radio-button">
-                                    <input type="radio" name="risk" value="HIGH" required>
-                                    <div class="radio-circle"></div>
-                                    <span class="radio-label">High Risk For Immediate OGTT 75g</span>
-                                </label>
-                                <label class="radio-button">
-                                    <input type="radio" name="risk" value="LOW" required>
-                                    <div class="radio-circle"></div>
-                                    <span class="radio-label">Low Risk For OGTT 75g on 24-28 weeks AOG</span>
-                                </label>
+                            <div>
+                                <input type="radio" id="high" name="risk" value="HIGH" required>
+                                <label for="high">High Risk For Immediate OGTT 75g</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="low" name="risk" value="LOW" required>
+                                <label for="low">Low Risk For OGTT 75g on 24-28 weeks AOG</label>
                             </div>
                         </section>
                     </section>
