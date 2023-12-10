@@ -66,13 +66,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
 
     if ($risked == 1) {
         if ($risk != "HIGH") {
-            header("Location: registration.php?error=Based from the factors it should be High Risk!");
+            header("Location: registration.php?error=Based from the factors it should be High Risk!&message=Error!");
             exit();
         }
     }
     else {
         if ($risk != "LOW") {
-            header("Location: registration.php?error=There are no factors, it should be Low Risk!");
+            header("Location: registration.php?error=There are no factors, it should be Low Risk!&message=Error!");
             exit();
         }
     }
