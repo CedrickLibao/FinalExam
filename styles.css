@@ -7,21 +7,33 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-h1, .title {
-  font-size: 2rem;
+.title {
+  font-size: 2.50rem;
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
 }
 
-h2, h3, .sub-title {
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2, .sub-title {
   font-weight: 500;
-  font-family: 'Montserrat', sans-serif;
   font-size: 1.50rem;
 }
 
-p, label, input, button, a {
+h3 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+label {
+  font-size: 0.75rem;
+  margin: 0px 10px;
+}
+
+p, label, input, button, a, span {
   font-weight: 400;
-  font-family: 'Montserrat', sans-serif;
 }
 
 :root {
@@ -386,6 +398,8 @@ p, label, input, button, a {
   background-color: rgba(34, 197, 94, 0.10);
   color: rgb(34 197 94);
   border: 1px rgb(34 197 94) solid;
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .badges .red {
@@ -397,11 +411,274 @@ p, label, input, button, a {
 }
 /*#endregion */
 
+/*#region checkbox */
+.checkbox-wrapper input[type="checkbox"] {
+  display: none;
+}
+
+.checkbox-wrapper .terms-label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.checkbox-wrapper .terms-label .label-text {
+  margin-left: 10px;
+}
+
+.checkbox-wrapper .checkbox-svg {
+  width: 20px;
+  height: 20px;
+}
+
+.checkbox-wrapper .checkbox-box {
+  fill: rgba(207, 205, 205, 0.425);
+  stroke: #8c00ff;
+  stroke-dasharray: 800;
+  stroke-dashoffset: 800;
+  transition: stroke-dashoffset 0.6s ease-in;
+}
+
+.checkbox-wrapper .checkbox-tick {
+  stroke: #8c00ff;
+  stroke-dasharray: 172;
+  stroke-dashoffset: 172;
+  transition: stroke-dashoffset 0.6s ease-in;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked + .terms-label .checkbox-box,
+  .checkbox-wrapper input[type="checkbox"]:checked + .terms-label .checkbox-tick {
+  stroke-dashoffset: 0;
+}
+
+/*#endregion */
+
+
 header {
-  background-color: lightgray;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.3);
+  margin-bottom: 5px;
+  color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
 }
 
 #header-logo {
   width: 50px;
+}
+
+.input {
+  margin: 10px;
+  display: block;
+  border: 2px solid transparent;
+  height: 2.5em;
+  padding-left: 0.8em;
+  outline: none;
+  overflow: hidden;
+  background-color: #F3F3F3;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+
+.input:hover,
+.input:focus {
+  border: 2px solid #4A9DEC;
+  box-shadow: 0px 0px 0px 7px rgb(74, 157, 236, 20%);
+  background-color: white;
+}
+
+#gdm {
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+#gdm > section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+main {
+  padding: 50px;
+  background-color: #ebebeb;
+}
+
+#textboxes {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+#textboxes div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#textboxes > div {
+  flex: 1 1 100%;
+}
+
+#textboxes section {
+  flex: 1 1 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#textboxes div > * {
+  flex: 1 1 100%;
+}
+
+#textboxes > section > section {
+  flex: 1 1 50%;
+}
+
+#textboxes section > div {
+  flex: 1 1;
+}
+
+fieldset {
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 10px;
+}
+
+#checkboxes > section {
+  flex: 1 0 300px;
+}
+
+hr {
+  border-top: 1px solid blue;
+  margin: 20px 0px;
+}
+
+/*#region radio */
+.radio-buttons {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-button {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.radio-button input[type="radio"] {
+  display: none;
+}
+
+.radio-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #aaa;
+  position: relative;
+  margin-right: 10px;
+}
+
+.radio-circle::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.2s ease-in-out;
+}
+
+.radio-button input[type="radio"]:checked + .radio-circle::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.radio-button:nth-of-type(1) input[type="radio"]:checked + .radio-circle::before {
+  background-color: red;
+}
+
+.radio-button:nth-of-type(2) input[type="radio"]:checked + .radio-circle::before {
+  background-color: green;
+}
+
+.radio-label {
+  font-weight: bold;
+}
+
+.radio-button:hover .radio-circle {
+  border-color: #555;
+}
+
+.radio-button:hover input[type="radio"]:checked + .radio-circle::before {
+  background-color: #555;
+}
+
+/*#endregion */
+
+#final > section:first-child {
+  flex: 1 1 350px;
+}
+
+#final > section:nth-child(2) {
+  flex: 1 1 350px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#final > section:nth-child(2) > *{
+  flex: 1 1 100%;
+}
+
+#final > section:last-child {
+  flex: 1 1 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*#region submit */
+.btn {
+  padding: 17px 40px;
+  border-radius: 50px;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 50%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all .5s ease;
+ }
+ 
+ .btn:hover {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+ }
+ 
+ .btn:active {
+  letter-spacing: 3px;
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+ }
+/*#endregion */
+
+
+footer {
+  padding: 20px;
+}
+
+#boom {
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
